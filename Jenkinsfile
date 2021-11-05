@@ -1,12 +1,10 @@
 pipeline {
   agent any
     stages {
-        stage('Pull') {
+        stage('build') {
              steps{
                 script{
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-                        userRemoteConfigs: [[
-                            url: 'https://github.com/zeinebbellahirich/Myapp.git']]])
+                    sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml "
                 }
             }
         }
