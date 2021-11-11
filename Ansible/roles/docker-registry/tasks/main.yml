@@ -8,6 +8,11 @@
     
 #----------------------------------------    
 
-- name: Push to docker hub
-  ansible.builtin.shell: docker push devops:latest
- 
+#----------------------------------------    
+
+- name: Tag and push to docker hub
+  docker_image:
+    name: devops
+    repository: zeinebbellahirich/devops
+    tag: latest
+    push: yes
