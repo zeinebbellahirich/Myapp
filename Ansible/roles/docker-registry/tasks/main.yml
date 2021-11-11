@@ -7,9 +7,9 @@
     email: zeineb.bellahirich1@esprit.tn
     
  #----------------------------------------
- - name: tap and push to  Docker Hub
+- name: tap and push to  Docker Hub
   docker_image:
-    name : myapp
+    name : devops
     repository: zeinebbellahirich/myapp
     tag: latest
     push: yes 
