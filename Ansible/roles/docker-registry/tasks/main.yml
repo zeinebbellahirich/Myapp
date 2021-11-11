@@ -9,5 +9,5 @@
 #----------------------------------------    
 
 - name: Push to docker hub
-  ansible.builtin.shell: docker push zeinebbellahirich/myapp
+  ansible.builtin.shell: docker push zeinebbellahirich/myapp:latest
  
